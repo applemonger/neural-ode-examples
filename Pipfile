@@ -1,0 +1,24 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[[source]]
+url = "https://download.pytorch.org/whl/cu118/"
+verify_ssl = true
+name = "downloadpytorch"
+
+[packages]
+torchvision = "*"
+torchaudio = "*"
+torchdiffeq = "*"
+tqdm = "*"
+matplotlib = "*"
+torch = {version = "==2.2.2", index = "downloadpytorch"}
+tensorboard = "*"
+
+[dev-packages]
+torch-tb-profiler = "*"
+
+[requires]
+python_version = "3.11"
